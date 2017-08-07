@@ -1,0 +1,74 @@
+{
+  "version": "2.0.0",
+  "mocks": [
+    {
+      "id": "350fa17f-75e7-4f98-8ac3-7d60612be579",
+      "active": true,
+      "method": "GET",
+      "url": "api/things",
+      "headers": {
+        "accept": "application/json, text/plain, */*"
+      },
+      "response": {
+        "status": 200,
+        "delay": 287,
+        "headers": {
+          "date": "Sun, 04 Jun 2017 00:43:21 GMT",
+          "connection": "keep-alive",
+          "x-powered-by": "Express",
+          "transfer-encoding": "chunked",
+          "content-type": "application/json"
+        },
+        "body": [
+          {
+            "id":"123",
+            "name":"dog",
+            "desc":"The domestic dog (Canis lupus familiaris or Canis familiaris)[4] is a member of genus Canis (canines) that forms part of the wolf-like canids,[5] and is the most widely abundant carnivore."
+          },
+          {
+            "id":"abc",
+            "name":"cat",
+            "desc":"The domestic cat[1][5] (Latin: Felis catus) is a small, typically furry, carnivorous mammal. They are often called house cats when kept as indoor pets or simply cats when there is no need to distinguish them from other felids and felines."
+          }
+        ]
+      },
+      "origin": "http://localhost:4000"
+    },
+    {
+      "id": "d8b5ae5e-4184-40b6-962c-e233b3fa2357",
+      "active": true,
+      "method": "GET",
+      "url": "api/articles",
+      "headers": {
+        "accept": "application/json, text/plain, */*"
+      },
+      "response": {
+        "status": 200,
+        "delay": 67,
+        "headers": {
+          "date": "Sun, 04 Jun 2017 02:09:34 GMT",
+          "connection": "keep-alive",
+          "x-powered-by": "Express",
+          "transfer-encoding": "chunked",
+          "content-type": "application/json"
+        },
+
+        "body": [
+          {
+            "id":"789",
+            "title":"red",
+            "text":"red is a pretty good color"
+          },
+          {
+            "id":"xyz",
+            "title":"blue",
+            "text":"blue is not a bad color"
+          }
+        ]
+      },
+      "name": "",
+      "origin": "http://localhost:4000"
+    }
+  ],
+  "groups": []
+}
