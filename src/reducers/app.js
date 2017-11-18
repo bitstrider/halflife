@@ -1,4 +1,4 @@
-import _ from 'lodash'
+import _keyBy from 'lodash/keyBy'
 import {
     FETCH_THINGS_SUCCEEDED,
     FETCH_ARTICLES_SUCCEEDED
@@ -18,7 +18,7 @@ export default (state = defaultState, action) => {
     switch (type) {
         case FETCH_THINGS_SUCCEEDED: {
             const { data } = payload
-            const byIds = _.keyBy(data,'id');
+            const byIds = _keyBy(data,'id');
             return {...state, things: { byIds, allIds:Object.keys(byIds) } }
         }
 
