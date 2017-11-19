@@ -1,4 +1,11 @@
-if(process.env.NODE_ENV === undefined) process.env.NODE_ENV = 'development'
-const { NODE_ENV } = process.env
-console.log("Loading",NODE_ENV,"configurations")
-module.exports = require(`./${NODE_ENV}`)
+const nodeEnv = process.env.NODE_ENV || "development"
+process.env.NODE_ENV = nodeEnv
+
+const path = `./config/${nodeEnv}.json`
+
+const dotenvJSON = require("dotenv-json")
+dotenvJSON({path})
+
+console.info("Loading", nodeEnv, "configurations")
+
+module.exports = process.env
